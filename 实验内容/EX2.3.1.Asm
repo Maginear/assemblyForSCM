@@ -1,0 +1,12 @@
+		ORG	0000H
+		MOV	R3, #03H
+		MOV	A, R3
+		ADD	A, #2H
+		MOVC	A, @A+PC
+		SJMP	$
+
+ TABL:DB 00H,01H,04H,09H      
+ 		DB 10H,19H,24H,31H      
+		DB 40H,41H,64H,79H      
+		DB 90H,0A9H,0C4H,0E1H 
+		END
