@@ -1,0 +1,88 @@
+A51 MACRO ASSEMBLER  EX3_3                                                                04/13/2015 19:26:14 PAGE     1
+
+
+MACRO ASSEMBLER A51 V6.12
+OBJECT MODULE PLACED IN .\EX3.3.OBJ
+ASSEMBLER INVOKED BY: H:\单片机编程调试\程序文件\C51\BIN\A51.EXE .\EX3.3.Asm SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1             ORG     0000H
+0000 8000              2             SJMP    START
+                       3     
+0002                   4     START:  
+0002 112A              5             CALL    INITDATA
+0004 1108              6             CALL    CALCULA
+0006 80FE              7             SJMP    $
+                       8     
+0008                   9     CALCULA:        
+0008 908100           10             MOV     DPTR, #8100H
+000B AA10             11             MOV     R2, 10H
+000D                  12     LOOP:                                     
+000D E0               13             MOVX    A, @DPTR
+000E 6006             14             JZ      ADDZERO
+0010 20E70A           15             JB      ACC.7, ADDNEGNUM
+0013 30E70D           16             JNB     ACC.7, ADDPOSNUM
+0016                  17                     ADDZERO:
+0016 2500             18                             ADD     A, 0
+0018 901FA5           19                             MOV     DPTR, #8101
+001B F0               20                             MOVX    @DPTR, A
+001C 22               21                             RET
+001D                  22                     ADDNEGNUM:
+001D F4               23                             CPL     A
+001E 901FA5           24                             MOV     DPTR, #8101
+0021 F0               25                             MOVX    @DPTR, A
+0022 22               26                             RET
+0023                  27                     ADDPOSNUM:
+0023 25E0             28                             ADD     A, ACC
+0025 908101           29                             MOV     DPTR, #8101H
+0028 F0               30                             MOVX    @DPTR, A
+0029 22               31                             RET
+                      32                                                     
+002A                  33     INITDATA:
+002A 908100           34             MOV     DPTR, #8100H
+002D 74FF             35        MOV  A, #-1h
+002F F0               36             MOVX    @DPTR, A
+0030 753097           37             MOV     30H, #-69H
+0033 753165           38             MOV     31H, #65H
+0036 7532F9           39             MOV     32H, #-7H
+0039 7533DB           40             MOV     33H, #-25H
+003C 7534B9           41             MOV     34H, #-47H
+003F 753556           42             MOV     35H, #56H
+0042 7536FD           43             MOV     36H, #-3H
+0045 753700           44             MOV     37H, #0H
+0048 753806           45             MOV     38H, #6H
+004B 7539FB           46             MOV     39H, #-5H
+004E 753A00           47             MOV     3AH, #0H
+0051 753BFF           48             MOV     3BH, #-1H
+0054 753CA9           49             MOV     3CH, #-57H
+0057 753D23           50             MOV     3DH, #23H
+005A 753EFB           51             MOV     3EH, #-5H
+005D 753FED           52             MOV     3FH, #-13H
+                      53     
+0060 751010           54             MOV     10H, #16
+0063 22               55             RET
+                      56             
+                      57             END
+A51 MACRO ASSEMBLER  EX3_3                                                                04/13/2015 19:26:14 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+ACC. . . . . . . .  D ADDR   00E0H   A   
+ADDNEGNUM. . . . .  C ADDR   001DH   A   
+ADDPOSNUM. . . . .  C ADDR   0023H   A   
+ADDZERO. . . . . .  C ADDR   0016H   A   
+CALCULA. . . . . .  C ADDR   0008H   A   
+INITDATA . . . . .  C ADDR   002AH   A   
+LOOP . . . . . . .  C ADDR   000DH   A   
+START. . . . . . .  C ADDR   0002H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

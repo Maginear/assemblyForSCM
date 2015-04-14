@@ -12,19 +12,19 @@ START:  MOV    SP, #40H
 
 LOOP:   MOV    DPTR, #ASCIIAB
         MOV    A, @R0
-		  INC    R0
+        INC    R0
         MOV    B, A
 		  SWAP   A
-		  ANL    A, #0FH
-		  MOVC   A, @A+DPTR
-		  MOV    @R1, A
-		  INC    R1
-		  MOV    A, B
-		  ANL    A, #0FH
-		  MOVC   A, @A+DPTR
-		  MOV    @R1, A
-		  INC    R1
-		  DJNZ   R5, LOOP
+	     ANL    A, #0FH
+        MOVC   A, @A+DPTR
+	MOV    @R1, A
+	INC    R1
+	MOV    A, B
+	ANL    A, #0FH
+	MOVC   A, @A+DPTR
+	MOV    @R1, A
+	INC    R1
+	DJNZ   R5, LOOP
 
-	 	  SJMP   $
-		  END
+	SJMP   $
+	END

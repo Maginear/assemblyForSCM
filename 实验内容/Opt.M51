@@ -1,0 +1,126 @@
+BL51 BANKED LINKER/LOCATER V4.13                                                        04/13/2015  20:29:16  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V4.13, INVOKED BY:
+H:\单片机编程调试\程序文件\C51\BIN\BL51.EXE huan.obj TO Opt
+
+
+INPUT MODULES INCLUDED:
+  huan.obj (HUAN)
+
+
+LINK MAP OF MODULE:  Opt (HUAN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0108H     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  Opt (HUAN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        HUAN
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  C:00ABH         SYMBOL        DAT
+  C:008BH         SYMBOL        DEL1
+  C:008DH         SYMBOL        DEL2
+  C:008FH         SYMBOL        DEL3
+  C:0091H         SYMBOL        DEL4
+  C:0089H         SYMBOL        DELAY
+  C:0076H         SYMBOL        DEL_MS
+  B:00A8H.7       SYMBOL        EA
+  C:0082H         SYMBOL        END0
+  B:00A8H.1       SYMBOL        ET0
+  C:009AH         SYMBOL        INT00
+  C:0039H         SYMBOL        MUSIC0
+  C:003FH         SYMBOL        MUSIC1
+  C:005BH         SYMBOL        MUSIC2
+  D:00B0H         SYMBOL        P3
+  C:0030H         SYMBOL        START
+  C:00EAH         SYMBOL        TABF
+  D:008CH         SYMBOL        TH0
+  D:008AH         SYMBOL        TL0
+  D:0089H         SYMBOL        TMOD
+  B:0088H.4       SYMBOL        TR0
+  C:0000H         LINE#         2
+  C:000BH         LINE#         4
+  C:0030H         LINE#         7
+  C:0032H         LINE#         8
+  C:0035H         LINE#         9
+  C:0037H         LINE#         10
+  C:0039H         LINE#         11
+BL51 BANKED LINKER/LOCATER V4.13                                                      04/13/2015  20:29:16  PAGE 2
+
+
+  C:003CH         LINE#         12
+  C:003DH         LINE#         13
+  C:003FH         LINE#         14
+  C:0042H         LINE#         15
+  C:0044H         LINE#         16
+  C:0045H         LINE#         17
+  C:0047H         LINE#         18
+  C:0049H         LINE#         19
+  C:004BH         LINE#         20
+  C:004DH         LINE#         21
+  C:004FH         LINE#         22
+  C:0050H         LINE#         23
+  C:0052H         LINE#         24
+  C:0054H         LINE#         25
+  C:0057H         LINE#         26
+  C:0059H         LINE#         27
+  C:005BH         LINE#         28
+  C:005EH         LINE#         29
+  C:0060H         LINE#         30
+  C:0061H         LINE#         31
+  C:0062H         LINE#         32
+  C:0064H         LINE#         33
+  C:0065H         LINE#         34
+  C:0067H         LINE#         35
+  C:006AH         LINE#         36
+  C:006CH         LINE#         37
+  C:006EH         LINE#         38
+  C:006FH         LINE#         39
+  C:0071H         LINE#         40
+  C:0074H         LINE#         41
+  C:0076H         LINE#         42
+  C:0079H         LINE#         43
+  C:007BH         LINE#         44
+  C:007DH         LINE#         45
+  C:007EH         LINE#         46
+  C:0080H         LINE#         47
+  C:0082H         LINE#         48
+  C:0085H         LINE#         49
+  C:0087H         LINE#         50
+  C:0089H         LINE#         52
+  C:008BH         LINE#         53
+  C:008DH         LINE#         54
+  C:008FH         LINE#         55
+  C:0091H         LINE#         56
+  C:0093H         LINE#         57
+  C:0095H         LINE#         58
+  C:0097H         LINE#         59
+  C:0099H         LINE#         60
+  C:009AH         LINE#         62
+  C:009CH         LINE#         63
+  C:009FH         LINE#         64
+  C:00A2H         LINE#         65
+  C:00A4H         LINE#         66
+  C:00A6H         LINE#         67
+  C:00A8H         LINE#         68
+  C:00AAH         LINE#         69
+  -------         ENDMOD        HUAN
+BL51 BANKED LINKER/LOCATER V4.13                                                      04/13/2015  20:29:16  PAGE 3
+
+
+
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

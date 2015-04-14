@@ -1,0 +1,225 @@
+构造目标 'Target 1'
+正在汇编 EX1.2.Asm...  
+连接中... 
+"Opt" - 0 错误 (s), 0   警告 (s).
+构造目标 'Target 1'
+"Opt" - 0 错误 (s), 0   警告 (s).
+构造目标 'Target 1'
+"Opt" - 0 错误 (s), 0   警告 (s).
+构造目标 'Target 1'
+"Opt" - 0 错误 (s), 0   警告 (s).
+构造目标 'Target 1'
+"Opt" - 0 错误 (s), 0   警告 (s).
+构造目标 'Target 1'
+正在汇编 EX3.3.Asm...  
+.\EX3.3.Asm(13): 错误 A40: INVALID REGISTER
+.\EX3.3.Asm(20): 错误 A40: INVALID REGISTER
+.\EX3.3.Asm(40): 错误 A40: INVALID REGISTER
+目标没产生
+构造目标 'Target 1'
+正在汇编 EX3.3.Asm...  
+.\EX3.3.Asm(13): 错误 A40: INVALID REGISTER
+.\EX3.3.Asm(20): 错误 A40: INVALID REGISTER
+.\EX3.3.Asm(40): 错误 A40: INVALID REGISTER
+目标没产生
+构造目标 'Target 1'
+正在汇编 EX3.3.Asm...  
+.\EX3.3.Asm(13): 错误 A40: INVALID REGISTER
+.\EX3.3.Asm(20): 错误 A40: INVALID REGISTER
+.\EX3.3.Asm(40): 错误 A40: INVALID REGISTER
+目标没产生
+构造目标 'Target 1'
+正在汇编 EX3.3.Asm...  
+.\EX3.3.Asm(13): 错误 A40: INVALID REGISTER
+.\EX3.3.Asm(20): 错误 A40: INVALID REGISTER
+.\EX3.3.Asm(40): 错误 A40: INVALID REGISTER
+目标没产生
+构造目标 'Target 1'
+正在汇编 EX3.3.Asm...  
+.\EX3.3.Asm(13): 错误 A40: INVALID REGISTER
+.\EX3.3.Asm(20): 错误 A40: INVALID REGISTER
+.\EX3.3.Asm(40): 错误 A40: INVALID REGISTER
+目标没产生
+构造目标 'Target 1'
+正在汇编 EX3.3.Asm...  
+.\EX3.3.Asm(13): 错误 A40: INVALID REGISTER
+.\EX3.3.Asm(20): 错误 A40: INVALID REGISTER
+.\EX3.3.Asm(40): 错误 A40: INVALID REGISTER
+目标没产生
+构造目标 'Target 1'
+正在汇编 EX3.3.Asm...  
+.\EX3.3.Asm(13): 错误 A40: INVALID REGISTER
+.\EX3.3.Asm(20): 错误 A40: INVALID REGISTER
+.\EX3.3.Asm(40): 错误 A40: INVALID REGISTER
+目标没产生
+构造目标 'Target 1'
+正在汇编 EX3.3.Asm...  
+.\EX3.3.Asm(40): 错误 A40: INVALID REGISTER
+目标没产生
+构造目标 'Target 1'
+正在汇编 EX3.3.Asm...  
+连接中... 
+"Opt" - 0 错误 (s), 0   警告 (s).
+构造目标 'Target 1'
+正在汇编 EX3.3.Asm...  
+连接中... 
+"Opt" - 0 错误 (s), 0   警告 (s).
+构造目标 'Target 1'
+正在汇编 EX3.3.Asm...  
+连接中... 
+"Opt" - 0 错误 (s), 0   警告 (s).
+构造目标 'Target 1'
+正在汇编 EX3.3.Asm...  
+连接中... 
+"Opt" - 0 错误 (s), 0   警告 (s).
+构造目标 'Target 1'
+正在汇编 EX3.3.Asm...  
+连接中... 
+"Opt" - 0 错误 (s), 0   警告 (s).
+构造目标 'Target 1'
+正在汇编 EX4.1.Asm...  
+.\EX4.1.Asm(1): 错误 A15: MISSING FACTOR
+.\EX4.1.Asm(7): 错误 A38: NUMBER OF OPERANDS DOES NOT MATCH INSTRUCTION
+.\EX4.1.Asm(13): 警告 A41: MISSING 'END' STATEMENT
+目标没产生
+构造目标 'Target 1'
+正在汇编 EX4.1.Asm...  
+.\EX4.1.Asm(7): 错误 A38: NUMBER OF OPERANDS DOES NOT MATCH INSTRUCTION
+.\EX4.1.Asm(13): 警告 A41: MISSING 'END' STATEMENT
+目标没产生
+构造目标 'Target 1'
+正在汇编 EX4.1.Asm...  
+.\EX4.1.Asm(7): 错误 A38: NUMBER OF OPERANDS DOES NOT MATCH INSTRUCTION
+.\EX4.1.Asm(13): 警告 A41: MISSING 'END' STATEMENT
+目标没产生
+构造目标 'Target 1'
+正在汇编 EX4.1.Asm...  
+.\EX4.1.Asm(13): 警告 A41: MISSING 'END' STATEMENT
+连接中... 
+"Opt" - 0 错误 (s), 1   警告 (s).
+构造目标 'Target 1'
+正在汇编 EX4.1.Asm...  
+连接中... 
+"Opt" - 0 错误 (s), 0   警告 (s).
+构造目标 'Target 1'
+正在汇编 EX4.1.Asm...  
+.\EX4.1.Asm(10): 错误 A38: NUMBER OF OPERANDS DOES NOT MATCH INSTRUCTION
+目标没产生
+构造目标 'Target 1'
+正在汇编 EX4.1.Asm...  
+连接中... 
+"Opt" - 0 错误 (s), 0   警告 (s).
+构造目标 'Target 1'
+正在汇编 EX4.1.Asm...  
+连接中... 
+"Opt" - 0 错误 (s), 0   警告 (s).
+构造目标 'Target 1'
+正在汇编 EX4.1.Asm...  
+连接中... 
+"Opt" - 0 错误 (s), 0   警告 (s).
+构造目标 'Target 1'
+正在汇编 EX4.1.Asm...  
+.\EX4.1.Asm(22): 错误 A45: UNDEFINED SYMBOL (PASS-2)
+目标没产生
+构造目标 'Target 1'
+正在汇编 EX4.1.Asm...  
+连接中... 
+"Opt" - 0 错误 (s), 0   警告 (s).
+构造目标 'Target 1'
+正在汇编 EX4.1.Asm...  
+连接中... 
+"Opt" - 0 错误 (s), 0   警告 (s).
+构造目标 'Target 1'
+正在汇编 EX4.1.Asm...  
+连接中... 
+"Opt" - 0 错误 (s), 0   警告 (s).
+构造目标 'Target 1'
+正在汇编 欢乐颂.Asm...  
+..\莱蘚欢乐颂.Asm(3): 错误 A9: SYNTAX ERROR
+..\莱蘚欢乐颂.Asm(3): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚欢乐颂.Asm(3): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚欢乐颂.Asm(3): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚欢乐颂.Asm(3): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚欢乐颂.Asm(53): 错误 A9: SYNTAX ERROR
+..\莱蘚欢乐颂.Asm(53): 错误 A9: SYNTAX ERROR
+..\莱蘚欢乐颂.Asm(53): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚欢乐颂.Asm(53): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚欢乐颂.Asm(53): 错误 A3: ILLEGAL CHARACTER
+目标没产生
+构造目标 'Target 1'
+正在汇编 欢乐颂.Asm...  
+..\莱蘚欢乐颂.Asm(3): 错误 A9: SYNTAX ERROR
+..\莱蘚欢乐颂.Asm(3): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚欢乐颂.Asm(3): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚欢乐颂.Asm(3): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚欢乐颂.Asm(3): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚欢乐颂.Asm(53): 错误 A9: SYNTAX ERROR
+..\莱蘚欢乐颂.Asm(53): 错误 A9: SYNTAX ERROR
+..\莱蘚欢乐颂.Asm(53): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚欢乐颂.Asm(53): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚欢乐颂.Asm(53): 错误 A3: ILLEGAL CHARACTER
+目标没产生
+构造目标 'Target 1'
+正在汇编 huan.Asm...  
+..\莱蘚huan.Asm(3): 错误 A9: SYNTAX ERROR
+..\莱蘚huan.Asm(3): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚huan.Asm(3): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚huan.Asm(3): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚huan.Asm(3): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚huan.Asm(53): 错误 A9: SYNTAX ERROR
+..\莱蘚huan.Asm(53): 错误 A9: SYNTAX ERROR
+..\莱蘚huan.Asm(53): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚huan.Asm(53): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚huan.Asm(53): 错误 A3: ILLEGAL CHARACTER
+目标没产生
+正在汇编 huan.Asm...  
+..\莱蘚huan.Asm(3): 错误 A9: SYNTAX ERROR
+..\莱蘚huan.Asm(3): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚huan.Asm(3): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚huan.Asm(3): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚huan.Asm(3): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚huan.Asm(53): 错误 A9: SYNTAX ERROR
+..\莱蘚huan.Asm(53): 错误 A9: SYNTAX ERROR
+..\莱蘚huan.Asm(53): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚huan.Asm(53): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚huan.Asm(53): 错误 A3: ILLEGAL CHARACTER
+..\例程\huan.Asm - 10 错误 (s), 0   警告 (s).
+构造目标 'Target 1'
+正在汇编 huan.Asm...  
+..\莱蘚huan.Asm(3): 错误 A9: SYNTAX ERROR
+..\莱蘚huan.Asm(3): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚huan.Asm(3): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚huan.Asm(3): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚huan.Asm(3): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚huan.Asm(53): 错误 A9: SYNTAX ERROR
+..\莱蘚huan.Asm(53): 错误 A9: SYNTAX ERROR
+..\莱蘚huan.Asm(53): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚huan.Asm(53): 错误 A3: ILLEGAL CHARACTER
+..\莱蘚huan.Asm(53): 错误 A3: ILLEGAL CHARACTER
+目标没产生
+构造目标 'Target 1'
+正在汇编 huan.Asm...  
+.\huan.Asm(3): 错误 A9: SYNTAX ERROR
+.\huan.Asm(3): 错误 A3: ILLEGAL CHARACTER
+.\huan.Asm(3): 错误 A3: ILLEGAL CHARACTER
+.\huan.Asm(3): 错误 A3: ILLEGAL CHARACTER
+.\huan.Asm(3): 错误 A3: ILLEGAL CHARACTER
+.\huan.Asm(53): 错误 A9: SYNTAX ERROR
+.\huan.Asm(53): 错误 A9: SYNTAX ERROR
+.\huan.Asm(53): 错误 A3: ILLEGAL CHARACTER
+.\huan.Asm(53): 错误 A3: ILLEGAL CHARACTER
+.\huan.Asm(53): 错误 A3: ILLEGAL CHARACTER
+目标没产生
+构造目标 'Target 1'
+正在汇编 huan.Asm...  
+.\huan.Asm(53): 错误 A9: SYNTAX ERROR
+.\huan.Asm(53): 错误 A9: SYNTAX ERROR
+.\huan.Asm(53): 错误 A3: ILLEGAL CHARACTER
+.\huan.Asm(53): 错误 A3: ILLEGAL CHARACTER
+.\huan.Asm(53): 错误 A3: ILLEGAL CHARACTER
+目标没产生
+构造目标 'Target 1'
+正在汇编 huan.Asm...  
+连接中... 
+正在从 "Opt" 产生 HEX文件...   
+"Opt" - 0 错误 (s), 0   警告 (s).

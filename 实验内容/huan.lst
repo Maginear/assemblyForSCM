@@ -1,0 +1,146 @@
+A51 MACRO ASSEMBLER  HUAN                                                                 04/13/2015 20:29:16 PAGE     1
+
+
+MACRO ASSEMBLER A51 V6.12
+OBJECT MODULE PLACED IN .\huan.OBJ
+ASSEMBLER INVOKED BY: H:\µ¥Æ¬»ú±à³Ìµ÷ÊÔ\³ÌÐòÎÄ¼þ\C51\BIN\A51.EXE .\huan.Asm SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG     0000H      
+0000 020030            2             LJMP    START
+000B                   3             ORG     000BH                   ;T0ÖÐ¶Ï
+000B 02009A            4             LJMP    INT00
+                       5     
+0030                   6             ORG     0030H
+0030 C28C              7     START:  CLR     TR0
+0032 758901            8             MOV     TMOD,   #01H
+0035 D2A9              9             SETB    ET0
+0037 D2AF             10             SETB    EA
+0039 75F000           11     MUSIC0: MOV     B,      #00H
+003C E4               12             CLR     A
+003D F540             13             MOV     40H,    A         ;40H´æ·ÅÈ¡ÖµµÄÐòºÅ
+003F 9000AB           14     MUSIC1: MOV     DPTR,   #DAT
+0042 E540             15             MOV     A,      40H
+0044 93               16             MOVC    A,      @A+DPTR
+0045 603B             17             JZ      END0               ;00H±íÊ¾½áÊø
+0047 F530             18             MOV     30H,    A
+0049 540F             19             ANL     A,      #0FH         ;µÍËÄÎ»±íÊ¾½ÚÅÄ
+004B F531             20             MOV     31H,    A         ;31H´æ·Å½ÚÅÄÂë
+004D E530             21             MOV     A,      30H
+004F C4               22             SWAP    A
+0050 540F             23             ANL     A,      #0FH
+0052 F532             24             MOV     32H,    A        ;32H´æ·ÅÒô·ûÆµÂÊ´úÂë
+0054 B40004           25             CJNE    A,      #00H,   MUSIC2  
+0057 C28C             26             CLR     TR0
+0059 801B             27             SJMP    DEL_MS
+005B 9000EA           28     MUSIC2: MOV     DPTR,   #TABF
+005E E532             29             MOV     A,      32H         
+0060 23               30             RL      A
+0061 14               31             DEC     A
+0062 F534             32             MOV     34H,    A
+0064 93               33             MOVC    A,      @A+DPTR
+0065 F58A             34             MOV     TL0,    A          ;¸ù¾ÝÒô·ûÆµÂÊµÃµ½¶¨Ê±Æ÷µÄ³õÖµ
+0067 858A44           35             MOV     44H,    TL0        ;±£´æ¶¨Ê±Æ÷³õÖµµÍ8Î»
+006A 1534             36             DEC     34H
+006C E534             37             MOV     A,      34H
+006E 93               38             MOVC    A,      @A+DPTR
+006F F58C             39             MOV     TH0,    A
+0071 858C45           40             MOV     45H,    TH0      ;±£´æ¶¨Ê±Æ÷³õÖµ¸ß8Î»
+0074 D28C             41             SETB    TR0
+0076 853133           42     DEL_MS: MOV     33H,    31H       ;½ÚÅÄÂë·ÅÈë33H,×÷ÑÓÊ±
+0079 1189             43             ACALL   DELAY
+007B E540             44             MOV     A,      40H
+007D 04               45             INC     A
+007E F540             46             MOV     40H,    A
+0080 80BD             47             SJMP    MUSIC1
+0082 753310           48     END0:   MOV     33H,    #10H        ;¸èÇú½áÊø£¬ÑÓÊ±Ò»Ãëºó¼ÌÐø
+0085 1189             49             ACALL   DELAY
+0087 80A7             50             SJMP    START
+                      51     
+0089 AA33             52     DELAY:  MOV     R2,     33H
+008B 7B02             53     DEL1:   MOV     R3,     #02               ;ÑÓÊ±125ms
+008D 7C64             54     DEL2:   MOV     R4,     #100
+008F 7DFF             55     DEL3:   MOV     R5,     #255
+0091 DDFE             56     DEL4:   DJNZ    R5,     DEL4
+0093 DCFA             57             DJNZ    R4,     DEL3
+0095 DBF6             58             DJNZ    R3,     DEL2
+A51 MACRO ASSEMBLER  HUAN                                                                 04/13/2015 20:29:16 PAGE     2
+
+0097 DAF2             59             DJNZ    R2,     DEL1
+0099 22               60             RET
+                      61           
+009A C2AF             62     INT00:  CLR     EA
+009C 85458C           63             MOV     TH0,    45H
+009F 85448A           64             MOV     TL0,    44H
+00A2 C0E0             65             PUSH    ACC 
+00A4 B2B3             66             CPL     P3.3
+00A6 D0E0             67             POP     ACC
+00A8 D2AF             68             SETB    EA
+00AA 32               69             RETI
+                      70     
+00AB 64647484         71     DAT:   DB 64H,64H,74H,84H,84H,74H,64H,54H,44H,44H,54H,64H,66H,52H,58H      ;ÒôÀÖ´úÂë£¬¸ßËÄÎ
+                             »±íÆµÂÊ£¬µÍËÄÎ»½ÚÅÄ
+00AF 84746454                
+00B3 44445464                
+00B7 665258                  
+00BA 64647484         72            DB 64H,64H,74H,84H,84H,74H,64H,54H,44H,44H,54H,64H,56H,42H,48H
+00BE 84746454                
+00C2 44445464                
+00C6 564248                  
+00C9 54546444         73            DB 54H,54H,64H,44H,54H,62H,72H,64H,54H,62H,72H,64H,54H,44H,54H,12H,64H
+00CD 54627264                
+00D1 54627264                
+00D5 54445412                
+00D9 64                      
+00DA 64647484         74            DB 64H,64H,74H,84H,84H,74H,64H,54H,44H,44H,54H,64H,56H,42H,48H,00H
+00DE 84746454                
+00E2 44445464                
+00E6 56424800                
+00EA FB04FBCC         75     TABF:  DB 0FBH,04H,0FBH,0CCH,0FCH,0CH,0FCH,44H,0FCH,0ACH,0FDH,09H,0FDH,34H   ;µÍÒô5-ÖÐÒô4
+00EE FC0CFC44                
+00F2 FCACFD09                
+00F6 FD34                    
+00F8 FD82FDC8         76            DB 0FDH,82H,0FDH,0C8H,0FEH,06H,0FEH,22H,0FEH,56H,0FEH,85H,0FEH,9AH,0FEH,0C1H ;ÖÐÒô5-
+                             ¸ßÒô5
+00FC FE06FE22                
+0100 FE56FE85                
+0104 FE9AFEC1                
+                      77            END 
+A51 MACRO ASSEMBLER  HUAN                                                                 04/13/2015 20:29:16 PAGE     3
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+ACC. . . . . . . .  D ADDR   00E0H   A   
+B. . . . . . . . .  D ADDR   00F0H   A   
+DAT. . . . . . . .  C ADDR   00ABH   A   
+DEL1 . . . . . . .  C ADDR   008BH   A   
+DEL2 . . . . . . .  C ADDR   008DH   A   
+DEL3 . . . . . . .  C ADDR   008FH   A   
+DEL4 . . . . . . .  C ADDR   0091H   A   
+DELAY. . . . . . .  C ADDR   0089H   A   
+DEL_MS . . . . . .  C ADDR   0076H   A   
+EA . . . . . . . .  B ADDR   00A8H.7 A   
+END0 . . . . . . .  C ADDR   0082H   A   
+ET0. . . . . . . .  B ADDR   00A8H.1 A   
+INT00. . . . . . .  C ADDR   009AH   A   
+MUSIC0 . . . . . .  C ADDR   0039H   A   
+MUSIC1 . . . . . .  C ADDR   003FH   A   
+MUSIC2 . . . . . .  C ADDR   005BH   A   
+P3 . . . . . . . .  D ADDR   00B0H   A   
+START. . . . . . .  C ADDR   0030H   A   
+TABF . . . . . . .  C ADDR   00EAH   A   
+TH0. . . . . . . .  D ADDR   008CH   A   
+TL0. . . . . . . .  D ADDR   008AH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR0. . . . . . . .  B ADDR   0088H.4 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

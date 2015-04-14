@@ -1,0 +1,92 @@
+A51 MACRO ASSEMBLER  EX3_2                                                                04/06/2015 18:58:01 PAGE     1
+
+
+MACRO ASSEMBLER A51 V6.12
+OBJECT MODULE PLACED IN .\EX3.2.OBJ
+ASSEMBLER INVOKED BY: H:\单片机编程调试\程序文件\C51\BIN\A51.EXE .\EX3.2.Asm SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1             ORG     0000H
+0000 8000              2             SJMP    START
+                       3     
+0002                   4     START:  
+0002 1131              5             CALL    INITDATA
+0004 1108              6             CALL    ADDNUM
+0006 80FE              7             SJMP    $
+                       8     
+0008                   9     ADDNUM: 
+0008 7830             10             MOV     R0, #30H
+000A E4               11             CLR     A
+000B C3               12             CLR     C
+000C AA10             13             MOV     R2, 10H
+000E                  14             LOOP1:  
+000E E6               15                     MOV     A, @R0
+000F 30E703           16                     JNB     ACC.7,POSNUM
+0012 20E70E           17                     JB              ACC.7,NEGNUM
+                      18     
+0015                  19                     POSNUM:
+0015 2528             20                             ADD     A, 28H
+0017 F528             21                             MOV     28H, A
+0019 E529             22                             MOV     A, 29H
+001B 3400             23                             ADDC    A, #0H
+001D F529             24                             MOV     29H, A
+001F 08               25                             INC     R0
+0020 DAEC             26                             DJNZ    R2, LOOP1
+0022 22               27                             RET
+                      28     
+0023                  29                     NEGNUM:
+0023 252A             30                             ADD     A, 2AH
+0025 F52A             31                             MOV     2AH, A
+0027 E52B             32                             MOV     A, 2BH
+0029 3400             33                             ADDC    A, #0H
+002B F52B             34                             MOV     2BH, A
+002D 08               35                             INC     R0
+002E DADE             36                             DJNZ    R2, LOOP1       
+0030 22               37                             RET
+                      38                     
+0031                  39     INITDATA: 
+0031 753097           40             MOV     30H, #-69H
+0034 753165           41             MOV     31H, #65H
+0037 7532F9           42             MOV     32H, #-7H
+003A 7533DB           43             MOV     33H, #-25H
+003D 7534B9           44             MOV     34H, #-47H
+0040 753556           45             MOV     35H, #56H
+0043 7536FD           46             MOV     36H, #-3H
+0046 753717           47             MOV     37H, #17H
+0049 753806           48             MOV     38H, #6H
+004C 7539FB           49             MOV     39H, #-5H
+004F 753ABB           50             MOV     3AH, #-45H
+0052 753BFF           51             MOV     3BH, #-1H
+0055 753CA9           52             MOV     3CH, #-57H
+0058 753D23           53             MOV     3DH, #23H
+005B 753EFB           54             MOV     3EH, #-5H
+005E 753FED           55             MOV     3FH, #-13H
+                      56     
+0061 751010           57             MOV     10H, #16
+0064 22               58             RET
+A51 MACRO ASSEMBLER  EX3_2                                                                04/06/2015 18:58:01 PAGE     2
+
+                      59     
+                      60             END
+A51 MACRO ASSEMBLER  EX3_2                                                                04/06/2015 18:58:01 PAGE     3
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+ACC. . . . . . . .  D ADDR   00E0H   A   
+ADDNUM . . . . . .  C ADDR   0008H   A   
+INITDATA . . . . .  C ADDR   0031H   A   
+LOOP1. . . . . . .  C ADDR   000EH   A   
+NEGNUM . . . . . .  C ADDR   0023H   A   
+POSNUM . . . . . .  C ADDR   0015H   A   
+START. . . . . . .  C ADDR   0002H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

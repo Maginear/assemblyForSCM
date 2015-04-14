@@ -1,0 +1,53 @@
+A51 MACRO ASSEMBLER  EX4_1                                                                04/13/2015 20:12:22 PAGE     1
+
+
+MACRO ASSEMBLER A51 V6.12
+OBJECT MODULE PLACED IN .\EX4.1.OBJ
+ASSEMBLER INVOKED BY: H:\单片机编程调试\程序文件\C51\BIN\A51.EXE .\EX4.1.Asm SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1             ORG     0000H
+0000 8000              2             SJMP    START
+0002                   3     START:
+0002 1122              4             CALL    INITDATA
+0004 8531F0            5             MOV     B, 31H
+0007 E532              6             MOV     A, 32H
+0009 A4                7             MUL     AB
+000A F540              8             MOV     40H, A
+000C ABF0              9             MOV     R3, B
+000E 8530F0           10             MOV     B, 30H
+0011 E532             11             MOV     A, 32H
+0013 A4               12             MUL     AB
+0014 85F042           13             MOV     42H, B
+0017 2B               14             ADD     A, R3
+0018 F541             15             MOV     41H, A
+001A E542             16             MOV     A, 42H
+001C 3400             17             ADDC    A, #0H
+001E F542             18             MOV     42H, A
+0020 80FE             19             SJMP    $
+                      20     
+0022                  21     INITDATA:
+0022 7530FF           22             MOV     30H, #0FFH
+0025 7531FF           23             MOV     31H, #0FFH
+0028 7532FF           24             MOV     32H, #0FFH
+002B 22               25             RET
+                      26     
+                      27             END
+A51 MACRO ASSEMBLER  EX4_1                                                                04/13/2015 20:12:22 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+INITDATA . . . . .  C ADDR   0022H   A   
+START. . . . . . .  C ADDR   0002H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

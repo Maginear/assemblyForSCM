@@ -1,0 +1,63 @@
+A51 MACRO ASSEMBLER  EX3_1                                                                04/08/2015 18:46:44 PAGE     1
+
+
+MACRO ASSEMBLER A51 V6.12
+OBJECT MODULE PLACED IN .\EX3.1.OBJ
+ASSEMBLER INVOKED BY: H:\单片机编程调试\程序文件\C51\BIN\A51.EXE .\EX3.1.Asm SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1                             ORG     0000H
+0000 7B45              2                             MOV     R3, #45H
+0002 75FF45            3                             MOV     0FFH, #45H
+0005 8000              4                             SJMP    START
+                       5     
+0007 1121              6     START:  CALL    INITDATA
+0009 110D              7                             CALL    COMPAR
+000B 80FE              8                             SJMP    $
+                       9     
+000D 7829             10     COMPAR: MOV     R0, #29H
+000F 7C14             11                             MOV     R4, #20
+0011 EC               12     LOOP2:  MOV     A, R4
+0012 600A             13                             JZ              SETAFFH
+0014 08               14                             INC     R0
+0015 1C               15                             DEC     R4
+0016 8640             16                             MOV     40H, @R0
+0018 EB               17                             MOV     A, R3
+0019 B540F5           18                             CJNE    A, 40H, LOOP2
+001C E6               19                             MOV     A, @R0
+001D 22               20                             RET
+                      21     
+001E E5FF             22     SETAFFH: MOV    A, 0FFH
+0020 22               23                             RET
+                      24     
+0021 7A14             25     INITDATA: MOV   R2, #20
+0023 7830             26                             MOV     R0, #30H
+0025 7901             27                             MOV     R1, #1H
+0027 E9               28     LOOP1:  MOV     A, R1
+0028 F6               29                             MOV     @R0, A
+0029 08               30                             INC     R0
+002A 09               31                             INC     R1
+002B DAFA             32                             DJNZ    R2, LOOP1
+002D 22               33                             RET
+                      34                             END
+A51 MACRO ASSEMBLER  EX3_1                                                                04/08/2015 18:46:44 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+COMPAR . . . . . .  C ADDR   000DH   A   
+INITDATA . . . . .  C ADDR   0021H   A   
+LOOP1. . . . . . .  C ADDR   0027H   A   
+LOOP2. . . . . . .  C ADDR   0011H   A   
+SETAFFH. . . . . .  C ADDR   001EH   A   
+START. . . . . . .  C ADDR   0007H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

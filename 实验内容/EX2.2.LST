@@ -1,0 +1,87 @@
+A51 MACRO ASSEMBLER  EX2_2                                                                04/08/2015 18:18:14 PAGE     1
+
+
+MACRO ASSEMBLER A51 V6.12
+OBJECT MODULE PLACED IN .\EX2.2.OBJ
+ASSEMBLER INVOKED BY: H:\单片机编程调试\程序文件\C51\BIN\A51.EXE .\EX2.2.Asm SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1                             ORG     0000H
+0000 8000              2                             SJMP    START
+                       3     
+0002 7A00              4     START:  MOV     R2, #0H
+0004 7B10              5             MOV     R3, #10H
+0006 7C20              6             MOV     R4, #20H
+0008 7D05              7             MOV     R5, #5
+000A 1127              8             CALL    INITBCD
+000C 900100            9             MOV     DPTR, #0100H
+000F 1113             10             CALL    ADDBCD
+0011 8040             11             SJMP    FINISH
+                      12                             
+0013                  13     ADDBCD: 
+0013 8A82             14             MOV     DPL, R2
+0015 E0               15             MOVX    A, @DPTR
+0016 F5F0             16             MOV     B, A
+0018 8B82             17             MOV     DPL, R3
+001A E0               18             MOVX    A, @DPTR
+001B 35F0             19             ADDC    A, B
+001D D4               20             DA              A
+001E 8C82             21             MOV     DPL, R4
+0020 F0               22             MOVX    @DPTR, A
+0021 0A               23             INC     R2
+0022 0B               24             INC     R3
+0023 0C               25             INC     R4
+0024 DDED             26             DJNZ    R5, ADDBCD                      
+0026 22               27             RET
+                      28     
+0027 900100           29     INITBCD: MOV    DPTR, #0100H
+002A 7410             30             MOV     A, #10H
+002C F0               31             MOVX    @DPTR, A
+002D 0582             32             INC     DPL
+002F 7432             33             MOV     A, #32H
+0031 F0               34             MOVX    @DPTR, A
+0032 0582             35             INC     DPL
+0034 7454             36             MOV     A, #54H
+0036 F0               37             MOVX    @DPTR, A
+0037 0582             38             INC     DPL
+0039 7476             39             MOV     A, #76H
+003B F0               40             MOVX    @DPTR, A
+                      41     
+003C 758210           42             MOV     DPL, #10H
+003F 7478             43             MOV     A, #78H
+0041 F0               44             MOVX    @DPTR, A
+0042 0582             45             INC     DPL
+0044 7456             46             MOV     A, #56H
+0046 F0               47             MOVX    @DPTR, A
+0047 0582             48             INC     DPL
+0049 7434             49             MOV     A, #34H
+004B F0               50             MOVX    @DPTR, A
+004C 0582             51             INC     DPL
+004E 7492             52             MOV     A, #92H
+0050 F0               53             MOVX    @DPTR, A
+0051 C3               54             CLR     C
+0052 22               55             RET
+                      56     
+0053 80FE             57     FINISH: SJMP    $
+                      58             END
+A51 MACRO ASSEMBLER  EX2_2                                                                04/08/2015 18:18:14 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+ADDBCD . . . . . .  C ADDR   0013H   A   
+B. . . . . . . . .  D ADDR   00F0H   A   
+DPL. . . . . . . .  D ADDR   0082H   A   
+FINISH . . . . . .  C ADDR   0053H   A   
+INITBCD. . . . . .  C ADDR   0027H   A   
+START. . . . . . .  C ADDR   0002H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

@@ -1,0 +1,49 @@
+A51 MACRO ASSEMBLER  EX2_3_2                                                              04/08/2015 18:46:07 PAGE     1
+
+
+MACRO ASSEMBLER A51 V6.12
+OBJECT MODULE PLACED IN .\EX2.3.2.OBJ
+ASSEMBLER INVOKED BY: H:\单片机编程调试\程序文件\C51\BIN\A51.EXE .\EX2.3.2.Asm SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1                     ORG     0000H
+0000 8000              2             SJMP    START
+                       3     
+0002 7B03              4     START:          MOV     R3, #03H
+0004 1108              5                     CALL    PCTL
+0006 8017              6                     SJMP    FINISH
+                       7     
+0008 90000F            8     PCTL:   MOV     DPTR, #TABL
+000B EB                9                     MOV     A, R3
+000C 93               10                     MOVC    A, @A+DPTR
+000D FB               11                     MOV     R3, A
+000E 22               12                     RET
+                      13     
+000F 00010409         14     TABL: DB 00H,01H,04H,09H      
+0013 10192431         15             DB 10H,19H,24H,31H      
+0017 40516479         16             DB 40H,51H,64H,79H      
+001B 90A9C4E1         17             DB 90H,0A9H,0C4H,0E1H
+                      18             
+                      19     
+                      20     
+001F 80FE             21     FINISH: SJMP    $
+                      22                     END
+A51 MACRO ASSEMBLER  EX2_3_2                                                              04/08/2015 18:46:07 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+FINISH . . . . . .  C ADDR   001FH   A   
+PCTL . . . . . . .  C ADDR   0008H   A   
+START. . . . . . .  C ADDR   0002H   A   
+TABL . . . . . . .  C ADDR   000FH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

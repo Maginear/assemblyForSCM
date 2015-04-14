@@ -1,0 +1,36 @@
+A51 MACRO ASSEMBLER  EX2_3_1                                                              04/05/2015 22:45:10 PAGE     1
+
+
+MACRO ASSEMBLER A51 V6.12
+OBJECT MODULE PLACED IN .\EX2.3.1.OBJ
+ASSEMBLER INVOKED BY: H:\单片机编程调试\程序文件\C51\BIN\A51.EXE .\EX2.3.1.Asm SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1                     ORG     0000H
+0000 7B03              2                     MOV     R3, #03H
+0002 EB                3                     MOV     A, R3
+0003 2402              4                     ADD     A, #2H
+0005 83                5                     MOVC    A, @A+PC
+0006 80FE              6                     SJMP    $
+                       7     
+0008 00010409          8      TABL:DB 00H,01H,04H,09H      
+000C 10192431          9                     DB 10H,19H,24H,31H      
+0010 40416479         10                     DB 40H,41H,64H,79H      
+0014 90A9C4E1         11                     DB 90H,0A9H,0C4H,0E1H 
+                      12                     END
+A51 MACRO ASSEMBLER  EX2_3_1                                                              04/05/2015 22:45:10 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+TABL . . . . . . .  C ADDR   0008H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

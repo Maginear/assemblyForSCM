@@ -1,0 +1,61 @@
+A51 MACRO ASSEMBLER  EX1_2                                                                04/13/2015 18:53:35 PAGE     1
+
+
+MACRO ASSEMBLER A51 V6.12
+OBJECT MODULE PLACED IN .\EX1.2.OBJ
+ASSEMBLER INVOKED BY: H:\单片机编程调试\程序文件\C51\BIN\A51.EXE .\EX1.2.Asm SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1             ORG    0000H
+0000 8010              2                       SJMP   START
+0002 30313233          3     ASCIIAB: DB    '0123456789ABCDEF'      ;定义首侄杂Φ腁SCII表
+0006 34353637                
+000A 38394142                
+000E 43444546                
+                       4      
+0012 758140            5     START:  MOV    SP, #40H
+0015 7830              6             MOV    R0, #30H
+0017 7940              7                       MOV    R1, #40H
+0019 7D02              8                       MOV    R5, #2
+001B 75301A            9             MOV    30H, #1AH
+001E 75311A           10             MOV    31H, #1AH
+0021 1123             11                       CALL   LOOP
+                      12     
+0023 900002           13     LOOP:   MOV    DPTR, #ASCIIAB
+0026 E6               14             MOV    A, @R0
+0027 08               15             INC    R0
+0028 F5F0             16             MOV    B, A
+002A C4               17             SWAP   A
+002B 540F             18             ANL    A, #0FH
+002D 93               19             MOVC   A, @A+DPTR
+002E F7               20             MOV    @R1, A
+002F 09               21             INC    R1
+0030 E5F0             22             MOV    A, B
+0032 540F             23             ANL    A, #0FH
+0034 93               24             MOVC   A, @A+DPTR
+0035 F7               25             MOV    @R1, A
+0036 09               26             INC    R1
+0037 DDEA             27             DJNZ   R5, LOOP
+                      28     
+0039 80FE             29             SJMP   $
+                      30             END
+A51 MACRO ASSEMBLER  EX1_2                                                                04/13/2015 18:53:35 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+ASCIIAB. . . . . .  C ADDR   0002H   A   
+B. . . . . . . . .  D ADDR   00F0H   A   
+LOOP . . . . . . .  C ADDR   0023H   A   
+SP . . . . . . . .  D ADDR   0081H   A   
+START. . . . . . .  C ADDR   0012H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
